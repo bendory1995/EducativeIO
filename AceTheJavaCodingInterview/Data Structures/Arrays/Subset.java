@@ -7,6 +7,10 @@ public class Subset {
 
     public static List<List<Integer>> findSubsets(int [] nums){
         List<List<Integer>> results = new ArrayList<>();
+        Set<List<Integer>> hashset = new HashSet<>();
+        List<List<Integer>> ans = new ArrayList<>();
+
+
         //add an empty set to the list
         results.add(new ArrayList<>());
 
@@ -20,6 +24,15 @@ public class Subset {
                 results.add(curr);
             }
         }
+
+        for(List<Integer> curr : results){
+           hashset.add(curr);
+        }
+        
+        for(List<Integer> curr : hashset){
+            ans.add(curr);
+        }
+        
         return results;
     }
 }
