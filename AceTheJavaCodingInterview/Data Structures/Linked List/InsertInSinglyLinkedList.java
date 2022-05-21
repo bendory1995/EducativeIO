@@ -56,6 +56,26 @@ public class InsertInSinglyLinkedList{
         return false;
     }
 
+    public void deleteByValue(int data){
+        if(head == null) return;
+        Node curr = head;
+        Node prev = null;
+
+        if(curr.data == data){
+            head = curr.next;
+            return;
+        }
+
+        while(curr != null){
+            if(curr.data == data){
+                prev.next = curr.next;
+                return;
+            }
+            prev = curr;
+            curr = curr.next;
+        }
+    }
+
     public static void main(String [] args){
 
     }
