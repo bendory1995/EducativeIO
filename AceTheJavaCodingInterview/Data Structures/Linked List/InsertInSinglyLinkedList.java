@@ -27,6 +27,26 @@ public class InsertInSinglyLinkedList{
 
     }
 
+    public void inertAtEnd(int data){
+        Node nodeToAdd = new Node();
+        nodeToAdd.data = data;
+        nodeToAdd.next = null;
+
+        if(head == null){
+            head = nodeToAdd;
+        }
+
+        Node temp = head;
+
+        
+        while(temp.next != null){
+            temp = temp.next;
+        }
+        temp.next = nodeToAdd;
+        size++;
+
+    }
+
     public static void main(String [] args){
 
     }
