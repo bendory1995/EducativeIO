@@ -44,7 +44,16 @@ public class InsertInSinglyLinkedList{
         }
         temp.next = nodeToAdd;
         size++;
-
+    }
+    public boolean searchInSinglyLinkedList(int data){
+        Node temp = head;
+        while(temp != null){
+            if(temp.data == data){
+                return true;
+            }
+            temp = temp.next;
+        }
+        return false;
     }
 
     public static void main(String [] args){
